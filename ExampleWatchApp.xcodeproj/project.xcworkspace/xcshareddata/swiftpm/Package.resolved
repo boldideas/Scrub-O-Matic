@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CountdownRing",
+        "repositoryURL": "https://github.com/d4r1091/CountdownRing.git",
+        "state": {
+          "branch": "watch-os-compatible",
+          "revision": "82ff8f88077d1668668fa410a76d958b2a07b2fe",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
