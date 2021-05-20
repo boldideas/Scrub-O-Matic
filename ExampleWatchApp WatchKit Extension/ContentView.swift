@@ -32,7 +32,6 @@ struct ContentView: View {
 
 struct Landing: View {
     
-    
     var body: some View {
         VStack(alignment: .center, spacing: 6.0) {
             Text("Hello, Gigi!")
@@ -52,32 +51,18 @@ struct Brushing: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        VStack(alignment: .center, spacing: 8.0) {
-            
-            ZStack {
-                CountdownRingView(
-                    countdownTimer: countdownTimer,
-                    gradientColors: [.green, .blue],
-                    lineWidth: 8
-                )
-                .padding(.bottom, 0.0)
-
-                TimerTextView(countdownTimer: self.countdownTimer)
-            }
-
-            if isTimerRunning {
-                Button("Reset") {
-                    isTimerRunning = false
-                    countdownTimer.reset()
-                    WKInterfaceDevice.current().play(.retry)
-                }
-            } else {
-                Button("Start") {
-                    isTimerRunning = true
-                    countdownTimer.start()
-                    WKInterfaceDevice.current().play(.start)
-                }
-            }
+        ZStack {
+            CountdownRingView(
+                countdownTimer: countdownTimer,
+                gradientColors: [.green, .blue],
+                padding: 10,
+                lineWidth: 15
+            )
+            Text("\(isTimerRunning ? "STOP" : "START")")
+                .font(.title)
+        }
+        .onTapGesture {
+            toggleTimer()
         }
         .onReceive(timer) { _ in
             guard isTimerRunning else {
@@ -98,6 +83,20 @@ struct Brushing: View {
                 WKInterfaceDevice.current().play(.stop)
             }
         }
+    }
+}
+
+extension Brushing {
+    
+    private func toggleTimer() {
+        if isTimerRunning {
+            countdownTimer.reset()
+            WKInterfaceDevice.current().play(.retry)
+        } else {
+            countdownTimer.start()
+            WKInterfaceDevice.current().play(.start)
+        }
+        isTimerRunning = !isTimerRunning
     }
 }
 

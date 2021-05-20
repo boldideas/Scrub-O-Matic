@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2C2B9A28264C37F7005E9EBC /* ExampleWatchApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2CD8C630263590C60066D591 /* ExampleWatchApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2C3DA7DA2656B59D00A9003D /* CountdownRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DA7D72656B59D00A9003D /* CountdownRingView.swift */; };
+		2C3DA7DB2656B59D00A9003D /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DA7D82656B59D00A9003D /* CountdownTimer.swift */; };
+		2C3DA7DC2656B59D00A9003D /* AnimationRingShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DA7D92656B59D00A9003D /* AnimationRingShape.swift */; };
 		2C5E23D0264C7F7D00623524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E23CF264C7F7D00623524 /* ContentView.swift */; };
-		2C8D79B8264C84A80056F2B6 /* CountdownRing in Frameworks */ = {isa = PBXBuildFile; productRef = 2C8D79B7264C84A80056F2B6 /* CountdownRing */; };
 		2CD8C625263590C20066D591 /* ExampleWatchApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2CD8C624263590C20066D591 /* ExampleWatchApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2CD8C62A263590C50066D591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8C629263590C50066D591 /* Assets.xcassets */; };
 		2CD8C636263590C60066D591 /* ExampleWatchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8C635263590C60066D591 /* ExampleWatchAppApp.swift */; };
@@ -63,6 +65,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C3DA7D72656B59D00A9003D /* CountdownRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownRingView.swift; sourceTree = "<group>"; };
+		2C3DA7D82656B59D00A9003D /* CountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
+		2C3DA7D92656B59D00A9003D /* AnimationRingShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationRingShape.swift; sourceTree = "<group>"; };
 		2C5E23CF264C7F7D00623524 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2CD8C620263590C20066D591 /* ExampleWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD8C624263590C20066D591 /* ExampleWatchApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ExampleWatchApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C8D79B8264C84A80056F2B6 /* CountdownRing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +134,9 @@
 		2CD8C634263590C60066D591 /* ExampleWatchApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2C3DA7D92656B59D00A9003D /* AnimationRingShape.swift */,
+				2C3DA7D72656B59D00A9003D /* CountdownRingView.swift */,
+				2C3DA7D82656B59D00A9003D /* CountdownTimer.swift */,
 				2CD8C635263590C60066D591 /* ExampleWatchAppApp.swift */,
 				2C5E23CF264C7F7D00623524 /* ContentView.swift */,
 				2CD8C639263590C60066D591 /* NotificationController.swift */,
@@ -168,7 +175,6 @@
 			);
 			name = ExampleWatchApp;
 			packageProductDependencies = (
-				2C8D79B6264C84A00056F2B6 /* CountdownRing */,
 			);
 			productName = ExampleWatchApp;
 			productReference = 2CD8C620263590C20066D591 /* ExampleWatchApp.app */;
@@ -205,7 +211,6 @@
 			);
 			name = "ExampleWatchApp WatchKit Extension";
 			packageProductDependencies = (
-				2C8D79B7264C84A80056F2B6 /* CountdownRing */,
 			);
 			productName = "ExampleWatchApp WatchKit Extension";
 			productReference = 2CD8C630263590C60066D591 /* ExampleWatchApp WatchKit Extension.appex */;
@@ -241,7 +246,6 @@
 			);
 			mainGroup = 2CD8C619263590C20066D591;
 			packageReferences = (
-				2C8D79B5264C84A00056F2B6 /* XCRemoteSwiftPackageReference "CountdownRing" */,
 			);
 			productRefGroup = 2CD8C621263590C20066D591 /* Products */;
 			projectDirPath = "";
@@ -286,8 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3DA7DA2656B59D00A9003D /* CountdownRingView.swift in Sources */,
 				2CD8C63A263590C60066D591 /* NotificationController.swift in Sources */,
 				2C5E23D0264C7F7D00623524 /* ContentView.swift in Sources */,
+				2C3DA7DB2656B59D00A9003D /* CountdownTimer.swift in Sources */,
+				2C3DA7DC2656B59D00A9003D /* AnimationRingShape.swift in Sources */,
 				2CD8C63E263590C60066D591 /* ComplicationController.swift in Sources */,
 				2CD8C636263590C60066D591 /* ExampleWatchAppApp.swift in Sources */,
 				2CD8C63C263590C60066D591 /* NotificationView.swift in Sources */,
@@ -576,30 +583,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		2C8D79B5264C84A00056F2B6 /* XCRemoteSwiftPackageReference "CountdownRing" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/d4r1091/CountdownRing.git";
-			requirement = {
-				branch = "watch-os-compatible";
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2C8D79B6264C84A00056F2B6 /* CountdownRing */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2C8D79B5264C84A00056F2B6 /* XCRemoteSwiftPackageReference "CountdownRing" */;
-			productName = CountdownRing;
-		};
-		2C8D79B7264C84A80056F2B6 /* CountdownRing */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2C8D79B5264C84A00056F2B6 /* XCRemoteSwiftPackageReference "CountdownRing" */;
-			productName = CountdownRing;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2CD8C61A263590C20066D591 /* Project object */;
 }
