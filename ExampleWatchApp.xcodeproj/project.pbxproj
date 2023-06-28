@@ -224,6 +224,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = "Bold Ideas";
 				TargetAttributes = {
 					2CD8C61F263590C20066D591 = {
 						CreatedOnToolsVersion = 12.4;
