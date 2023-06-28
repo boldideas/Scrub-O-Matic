@@ -44,10 +44,11 @@ struct Landing: View {
 struct Brushing: View {
     
     @State var isTimerRunning = false
-    @ObservedObject var countdownTimer = CountdownTimer(limitTimeInteraval: 120)
-    @State var timeRemaining = 120
+    @ObservedObject var countdownTimer = CountdownTimer(limitTimeInteraval: Self.interval)
+    @State var timeRemaining = Self.interval.asInt()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
+    private static let interval: TimeInterval = 20
+
     var body: some View {
         ZStack {
             CountdownRingView(
@@ -66,19 +67,13 @@ struct Brushing: View {
             guard isTimerRunning else {
                 return
             }
-            
-            let notifications: [Int: WKHapticType] = [90: .notification,
-                                                      60: .directionDown,
-                                                      30: .directionUp]
-            
+                        
             if timeRemaining > 0 {
                 timeRemaining -= 1
-                if let hapticNotification = notifications.first(where: {$0.key == timeRemaining})?.value {
-                    WKInterfaceDevice.current().play(hapticNotification)
-                }
-                
+                BrushingFeedback.sendTimerElapsingFeebackForInterval(Self.interval, elapsingTime: timeRemaining)
             } else {
-                WKInterfaceDevice.current().play(.stop)
+                toggleTimer()
+                BrushingFeedback.sendTimeElapsedFeedback()
             }
         }
     }
