@@ -47,7 +47,7 @@ struct Brushing: View {
     @ObservedObject var countdownTimer = CountdownTimer(limitTimeInteraval: Self.interval)
     @State var timeRemaining = Self.interval.asInt()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    private static let interval: TimeInterval = 20
+    private static let interval: TimeInterval = 120
 
     var body: some View {
         ZStack {
