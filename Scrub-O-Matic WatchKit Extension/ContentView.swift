@@ -29,10 +29,13 @@ struct Landing: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: 6.0) {
-            Text("Hello, Gigi!")
-            Text("Enjoy the LIBERAZIONE!")
-            Button("Ehm, No.") {
-                
+            Text("Well done!")
+                .font(.title)
+                .bold()
+            Text("🪥🎉")
+                .font(.title)
+            Button("Close") {
+
             }
         }
     }
