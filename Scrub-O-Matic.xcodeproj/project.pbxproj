@@ -85,8 +85,8 @@
 		2CD8C619263590C20066D591 = {
 			isa = PBXGroup;
 			children = (
-				2CD8C628263590C20066D591 /* ExampleWatchApp WatchKit App */,
-				2CD8C634263590C60066D591 /* ExampleWatchApp WatchKit Extension */,
+				2CD8C628263590C20066D591 /* Scrub-O-Matic WatchKit App */,
+				2CD8C634263590C60066D591 /* Scrub-O-Matic WatchKit Extension */,
 				2CD8C621263590C20066D591 /* Products */,
 				2C2B9A1F264C3619005E9EBC /* Frameworks */,
 			);
@@ -101,16 +101,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2CD8C628263590C20066D591 /* ExampleWatchApp WatchKit App */ = {
+		2CD8C628263590C20066D591 /* Scrub-O-Matic WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
 				2CD8C629263590C50066D591 /* Assets.xcassets */,
 				2CD8C62B263590C50066D591 /* Info.plist */,
 			);
-			path = "ExampleWatchApp WatchKit App";
+			path = "Scrub-O-Matic WatchKit App";
 			sourceTree = "<group>";
 		};
-		2CD8C634263590C60066D591 /* ExampleWatchApp WatchKit Extension */ = {
+		2CD8C634263590C60066D591 /* Scrub-O-Matic WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
 				2C3DA7D92656B59D00A9003D /* AnimationRingShape.swift */,
@@ -126,7 +126,7 @@
 				2CD8C645263590C70066D591 /* PushNotificationPayload.apns */,
 				2CD8C641263590C70066D591 /* Preview Content */,
 			);
-			path = "ExampleWatchApp WatchKit Extension";
+			path = "Scrub-O-Matic WatchKit Extension";
 			sourceTree = "<group>";
 		};
 		2CD8C641263590C70066D591 /* Preview Content */ = {
@@ -385,7 +385,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5FH2C659U2;
-				INFOPLIST_FILE = "ExampleWatchApp WatchKit App/Info.plist";
+				INFOPLIST_FILE = "Scrub-O-Matic WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
@@ -408,7 +408,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5FH2C659U2;
-				INFOPLIST_FILE = "ExampleWatchApp WatchKit App/Info.plist";
+				INFOPLIST_FILE = "Scrub-O-Matic WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
