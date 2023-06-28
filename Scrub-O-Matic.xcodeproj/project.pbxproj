@@ -11,7 +11,7 @@
 		2C3DA7DB2656B59D00A9003D /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DA7D82656B59D00A9003D /* CountdownTimer.swift */; };
 		2C3DA7DC2656B59D00A9003D /* AnimationRingShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DA7D92656B59D00A9003D /* AnimationRingShape.swift */; };
 		2C5E23D0264C7F7D00623524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E23CF264C7F7D00623524 /* ContentView.swift */; };
-		2CD8C625263590C20066D591 /* ExampleWatchApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2CD8C624263590C20066D591 /* ExampleWatchApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2CD8C625263590C20066D591 /* Scrub-O-Matic WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2CD8C624263590C20066D591 /* Scrub-O-Matic WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2CD8C62A263590C50066D591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8C629263590C50066D591 /* Assets.xcassets */; };
 		2CD8C636263590C60066D591 /* ExampleWatchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8C635263590C60066D591 /* ExampleWatchAppApp.swift */; };
 		2CD8C63A263590C60066D591 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8C639263590C60066D591 /* NotificationController.swift */; };
@@ -38,7 +38,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				2CD8C625263590C20066D591 /* ExampleWatchApp WatchKit App.app in Embed Watch Content */,
+				2CD8C625263590C20066D591 /* Scrub-O-Matic WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,8 +50,8 @@
 		2C3DA7D82656B59D00A9003D /* CountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		2C3DA7D92656B59D00A9003D /* AnimationRingShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationRingShape.swift; sourceTree = "<group>"; };
 		2C5E23CF264C7F7D00623524 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		2CD8C620263590C20066D591 /* ExampleWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CD8C624263590C20066D591 /* ExampleWatchApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ExampleWatchApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CD8C620263590C20066D591 /* Scrub-O-Matic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scrub-O-Matic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CD8C624263590C20066D591 /* Scrub-O-Matic WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scrub-O-Matic WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD8C629263590C50066D591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CD8C62B263590C50066D591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CD8C635263590C60066D591 /* ExampleWatchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleWatchAppApp.swift; sourceTree = "<group>"; };
@@ -95,8 +95,8 @@
 		2CD8C621263590C20066D591 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2CD8C620263590C20066D591 /* ExampleWatchApp.app */,
-				2CD8C624263590C20066D591 /* ExampleWatchApp WatchKit App.app */,
+				2CD8C620263590C20066D591 /* Scrub-O-Matic.app */,
+				2CD8C624263590C20066D591 /* Scrub-O-Matic WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,9 +140,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2CD8C61F263590C20066D591 /* ExampleWatchApp */ = {
+		2CD8C61F263590C20066D591 /* Scrub-O-Matic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CD8C650263590C70066D591 /* Build configuration list for PBXNativeTarget "ExampleWatchApp" */;
+			buildConfigurationList = 2CD8C650263590C70066D591 /* Build configuration list for PBXNativeTarget "Scrub-O-Matic" */;
 			buildPhases = (
 				2CD8C61E263590C20066D591 /* Resources */,
 				2CD8C64F263590C70066D591 /* Embed Watch Content */,
@@ -152,16 +152,16 @@
 			dependencies = (
 				2CD8C627263590C20066D591 /* PBXTargetDependency */,
 			);
-			name = ExampleWatchApp;
+			name = "Scrub-O-Matic";
 			packageProductDependencies = (
 			);
 			productName = ExampleWatchApp;
-			productReference = 2CD8C620263590C20066D591 /* ExampleWatchApp.app */;
+			productReference = 2CD8C620263590C20066D591 /* Scrub-O-Matic.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
 		};
-		2CD8C623263590C20066D591 /* ExampleWatchApp WatchKit App */ = {
+		2CD8C623263590C20066D591 /* Scrub-O-Matic WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CD8C64C263590C70066D591 /* Build configuration list for PBXNativeTarget "ExampleWatchApp WatchKit App" */;
+			buildConfigurationList = 2CD8C64C263590C70066D591 /* Build configuration list for PBXNativeTarget "Scrub-O-Matic WatchKit App" */;
 			buildPhases = (
 				2CD8C622263590C20066D591 /* Resources */,
 				2CD8C62C263590C60066D591 /* Sources */,
@@ -171,9 +171,9 @@
 			);
 			dependencies = (
 			);
-			name = "ExampleWatchApp WatchKit App";
+			name = "Scrub-O-Matic WatchKit App";
 			productName = "ExampleWatchApp WatchKit App";
-			productReference = 2CD8C624263590C20066D591 /* ExampleWatchApp WatchKit App.app */;
+			productReference = 2CD8C624263590C20066D591 /* Scrub-O-Matic WatchKit App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -195,7 +195,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2CD8C61D263590C20066D591 /* Build configuration list for PBXProject "ExampleWatchApp" */;
+			buildConfigurationList = 2CD8C61D263590C20066D591 /* Build configuration list for PBXProject "Scrub-O-Matic" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -210,8 +210,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2CD8C61F263590C20066D591 /* ExampleWatchApp */,
-				2CD8C623263590C20066D591 /* ExampleWatchApp WatchKit App */,
+				2CD8C61F263590C20066D591 /* Scrub-O-Matic */,
+				2CD8C623263590C20066D591 /* Scrub-O-Matic WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -257,7 +257,7 @@
 /* Begin PBXTargetDependency section */
 		2CD8C627263590C20066D591 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2CD8C623263590C20066D591 /* ExampleWatchApp WatchKit App */;
+			target = 2CD8C623263590C20066D591 /* Scrub-O-Matic WatchKit App */;
 			targetProxy = 2CD8C626263590C20066D591 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -452,7 +452,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2CD8C61D263590C20066D591 /* Build configuration list for PBXProject "ExampleWatchApp" */ = {
+		2CD8C61D263590C20066D591 /* Build configuration list for PBXProject "Scrub-O-Matic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CD8C646263590C70066D591 /* Debug */,
@@ -461,7 +461,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CD8C64C263590C70066D591 /* Build configuration list for PBXNativeTarget "ExampleWatchApp WatchKit App" */ = {
+		2CD8C64C263590C70066D591 /* Build configuration list for PBXNativeTarget "Scrub-O-Matic WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CD8C64D263590C70066D591 /* Debug */,
@@ -470,7 +470,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CD8C650263590C70066D591 /* Build configuration list for PBXNativeTarget "ExampleWatchApp" */ = {
+		2CD8C650263590C70066D591 /* Build configuration list for PBXNativeTarget "Scrub-O-Matic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CD8C651263590C70066D591 /* Debug */,
