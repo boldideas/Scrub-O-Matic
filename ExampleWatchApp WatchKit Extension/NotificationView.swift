@@ -1,8 +1,5 @@
 //
-//  NotificationView.swift
-//  ExampleWatchApp WatchKit Extension
-//
-//  Created by Dario Carlomagno on 25/04/21.
+//  Copyright © 2023 Bold Ideas. All rights reserved.
 //
 
 import SwiftUI

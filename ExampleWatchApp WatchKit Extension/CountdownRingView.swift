@@ -1,8 +1,5 @@
 //
-//  CountdownRing.swift
-//
-//
-//  Created by Yoshinori Imajo on 2020/02/05.
+//  Copyright © 2023 Bold Ideas. All rights reserved.
 //
 
 import SwiftUI

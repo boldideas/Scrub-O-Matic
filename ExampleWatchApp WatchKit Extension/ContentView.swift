@@ -1,10 +1,6 @@
 //
-//  ContentView.swift
-//  ExampleWatchApp WatchKit Extension
+//  Copyright © 2023 Bold Ideas. All rights reserved.
 //
-//  Created by Dario Carlomagno on 25/04/21.
-//
-
 import SwiftUI
 import Combine
 
