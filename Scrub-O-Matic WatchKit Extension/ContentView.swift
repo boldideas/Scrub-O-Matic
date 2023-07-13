@@ -70,10 +70,10 @@ struct Brushing: View {
                         
             if timeRemaining > 0 {
                 timeRemaining -= 1
-                BrushingFeedback.sendTimerElapsingFeebackForInterval(Self.interval, elapsingTime: timeRemaining)
+                BrushingFeedback.playTimeElapsingForInterval(Self.interval, elapsingTime: timeRemaining)
             } else {
                 toggleTimer()
-                BrushingFeedback.sendTimeElapsedFeedback()
+                BrushingFeedback.playTimeElapsed()
             }
         }
     }
@@ -84,9 +84,11 @@ extension Brushing {
     private func toggleTimer() {
         if isTimerRunning {
             countdownTimer.reset()
+            WatchKitSession.shared.stop()
             WKInterfaceDevice.current().play(.retry)
         } else {
             countdownTimer.start()
+            WatchKitSession.shared.start()
             WKInterfaceDevice.current().play(.start)
         }
         isTimerRunning = !isTimerRunning
