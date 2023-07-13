@@ -46,8 +46,9 @@ struct Brushing: View {
     @State var isTimerRunning = false
     @ObservedObject var countdownTimer = CountdownTimer(limitTimeInteraval: Self.interval)
     @State var timeRemaining = Self.interval.asInt()
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    private static let interval: TimeInterval = 120
+    let timer = Timer.publish(every: 1, on: .main, in: .common)
+        .autoconnect()
+    private static let interval: TimeInterval = 10
 
     var body: some View {
         ZStack {
@@ -70,12 +71,22 @@ struct Brushing: View {
                         
             if timeRemaining > 0 {
                 timeRemaining -= 1
-                BrushingFeedback.playTimeElapsingForInterval(Self.interval, elapsingTime: timeRemaining)
+                BrushingFeedback.sendTimeElapsingForInterval(Self.interval, elapsingTime: timeRemaining)
             } else {
-                toggleTimer()
-                BrushingFeedback.playTimeElapsed()
+                BrushingFeedback.sendTimeElapsed()
             }
         }
+    }
+}
+
+extension Brushing {
+    private func startCountdownTimer() {
+        countdownTimer.start()
+    }
+    
+    private func resetCountdownTimer() {
+        timeRemaining = Self.interval.asInt()
+        countdownTimer.reset()
     }
 }
 
@@ -83,13 +94,13 @@ extension Brushing {
     
     private func toggleTimer() {
         if isTimerRunning {
-            countdownTimer.reset()
+            resetCountdownTimer()
             WatchKitSession.shared.stop()
-            WKInterfaceDevice.current().play(.retry)
+            BrushingFeedback.sendStart()
         } else {
-            countdownTimer.start()
+            startCountdownTimer()
             WatchKitSession.shared.start()
-            WKInterfaceDevice.current().play(.start)
+            BrushingFeedback.sendStop()
         }
         isTimerRunning = !isTimerRunning
     }

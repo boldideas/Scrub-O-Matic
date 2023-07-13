@@ -8,19 +8,19 @@ struct BrushingFeedback {
     
     private init() {}
     
-    static func playStart() {
+    static func sendStart() {
         WKInterfaceDevice.current().play(.start)
     }
     
-    static func playStop() {
+    static func sendStop() {
         WKInterfaceDevice.current().play(.stop)
     }
     
-    static func playTimeElapsed() {
-        WKInterfaceDevice.current().play(.stop)
+    static func sendTimeElapsed() {
+        WKInterfaceDevice.current().play(.success)
     }
     
-    static func playTimeElapsingForInterval(_ interval: TimeInterval, elapsingTime: Int) {
+    static func sendTimeElapsingForInterval(_ interval: TimeInterval, elapsingTime: Int) {
         let denominator = 4
         let quarter = interval.fractionedWith(numerator: 1, denominator: denominator).asInt()
         let half = interval.fractionedWith(numerator: 2, denominator: denominator).asInt()
