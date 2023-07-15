@@ -21,7 +21,7 @@
 		2CD8C640263590C70066D591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8C63F263590C70066D591 /* Assets.xcassets */; };
 		2CD8C643263590C70066D591 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8C642263590C70066D591 /* Preview Assets.xcassets */; };
 		2CE123C92A4C96550013CE70 /* TimeInterval+Fraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE123C82A4C941D0013CE70 /* TimeInterval+Fraction.swift */; };
-		2CE123CB2A4C9B590013CE70 /* BrushingFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE123CA2A4C9B590013CE70 /* BrushingFeedback.swift */; };
+		2CE123CB2A4C9B590013CE70 /* BrushingFeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE123CA2A4C9B590013CE70 /* BrushingFeedbackService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,7 @@
 		2CD8C644263590C70066D591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CD8C645263590C70066D591 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		2CE123C82A4C941D0013CE70 /* TimeInterval+Fraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Fraction.swift"; sourceTree = "<group>"; };
-		2CE123CA2A4C9B590013CE70 /* BrushingFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushingFeedback.swift; sourceTree = "<group>"; };
+		2CE123CA2A4C9B590013CE70 /* BrushingFeedbackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushingFeedbackService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +124,7 @@
 				2C3DA7D82656B59D00A9003D /* CountdownTimer.swift */,
 				2CD8C635263590C60066D591 /* ExampleWatchAppApp.swift */,
 				2C5E23CF264C7F7D00623524 /* ContentView.swift */,
-				2CE123CA2A4C9B590013CE70 /* BrushingFeedback.swift */,
+				2CE123CA2A4C9B590013CE70 /* BrushingFeedbackService.swift */,
 				2C3D80E22A600FA900FE1DF2 /* RuntimeSession.swift */,
 				2CD8C639263590C60066D591 /* NotificationController.swift */,
 				2CD8C63B263590C60066D591 /* NotificationView.swift */,
@@ -255,7 +255,7 @@
 				2CD8C63A263590C60066D591 /* NotificationController.swift in Sources */,
 				2C5E23D0264C7F7D00623524 /* ContentView.swift in Sources */,
 				2C3DA7DB2656B59D00A9003D /* CountdownTimer.swift in Sources */,
-				2CE123CB2A4C9B590013CE70 /* BrushingFeedback.swift in Sources */,
+				2CE123CB2A4C9B590013CE70 /* BrushingFeedbackService.swift in Sources */,
 				2CE123C92A4C96550013CE70 /* TimeInterval+Fraction.swift in Sources */,
 				2C3DA7DC2656B59D00A9003D /* AnimationRingShape.swift in Sources */,
 				2CD8C63E263590C60066D591 /* ComplicationController.swift in Sources */,

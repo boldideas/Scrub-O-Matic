@@ -17,15 +17,17 @@ struct ContentView: View {
         VStack {
             switch screen {
             case .landing:
-                Landing()
+                Landing(screen: $screen)
             case .brushing:
-                Brushing()
+                Brushing(screen: $screen)
             }
         }
     }
 }
 
 struct Landing: View {
+    
+    @Binding var screen: ContentView.Screen
     
     var body: some View {
         VStack(alignment: .center, spacing: 6.0) {
@@ -35,7 +37,7 @@ struct Landing: View {
             Text("🪥🎉")
                 .font(.title)
             Button("Close") {
-
+                screen = .brushing
             }
         }
     }
@@ -43,6 +45,7 @@ struct Landing: View {
 
 struct Brushing: View {
     
+    @Binding var screen: ContentView.Screen
     @State var isTimerRunning = false
     @ObservedObject var countdownTimer = CountdownTimer(limitTimeInteraval: Self.interval)
     @State var timeRemaining = Self.interval.asInt()
@@ -74,8 +77,16 @@ struct Brushing: View {
                 BrushingFeedback.sendTimeElapsingForInterval(Self.interval, elapsingTime: timeRemaining)
             } else {
                 BrushingFeedback.sendTimeElapsed()
+                navigateToLandingScreen()
             }
         }
+    }
+}
+
+extension Brushing {
+    
+    func navigateToLandingScreen() {
+        screen = .landing
     }
 }
 
