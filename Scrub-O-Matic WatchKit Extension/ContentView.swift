@@ -57,7 +57,7 @@ struct Brushing: View {
     @State var timeRemaining = Self.interval.asInt()
     let timer = Timer.publish(every: 1, on: .main, in: .common)
         .autoconnect()
-    private static let interval: TimeInterval = 10
+    private static let interval: TimeInterval = BrushingInterval.time
 
     var body: some View {
         ZStack {

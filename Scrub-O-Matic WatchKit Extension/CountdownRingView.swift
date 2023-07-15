@@ -63,7 +63,7 @@ private extension CountdownRingView {
 @available(iOS 13.0, watchOS 6.0, *)
 struct RingSpinnerView_Previews: PreviewProvider {
     static var previews: some View {
-        CountdownRingView(countdownTimer: CountdownTimer(limitTimeInteraval: 10))
+        CountdownRingView(countdownTimer: CountdownTimer(limitTimeInteraval: BrushingInterval.time))
     }
 }
 

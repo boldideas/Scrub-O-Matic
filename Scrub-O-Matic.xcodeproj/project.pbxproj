@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1C3A172A62B630001EB5CC /* BrushingInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1C3A162A62B630001EB5CC /* BrushingInterval.swift */; };
 		2C3D80E32A600FA900FE1DF2 /* RuntimeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3D80E22A600FA900FE1DF2 /* RuntimeSession.swift */; };
 		2C3DA7DA2656B59D00A9003D /* CountdownRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DA7D72656B59D00A9003D /* CountdownRingView.swift */; };
 		2C3DA7DB2656B59D00A9003D /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DA7D82656B59D00A9003D /* CountdownTimer.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C1C3A162A62B630001EB5CC /* BrushingInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushingInterval.swift; sourceTree = "<group>"; };
 		2C3D80E22A600FA900FE1DF2 /* RuntimeSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeSession.swift; sourceTree = "<group>"; };
 		2C3DA7D72656B59D00A9003D /* CountdownRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownRingView.swift; sourceTree = "<group>"; };
 		2C3DA7D82656B59D00A9003D /* CountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				2CD8C645263590C70066D591 /* PushNotificationPayload.apns */,
 				2CD8C641263590C70066D591 /* Preview Content */,
 				2CE123C82A4C941D0013CE70 /* TimeInterval+Fraction.swift */,
+				2C1C3A162A62B630001EB5CC /* BrushingInterval.swift */,
 			);
 			path = "Scrub-O-Matic WatchKit Extension";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				2CD8C63E263590C60066D591 /* ComplicationController.swift in Sources */,
 				2CD8C636263590C60066D591 /* ExampleWatchAppApp.swift in Sources */,
 				2CD8C63C263590C60066D591 /* NotificationView.swift in Sources */,
+				2C1C3A172A62B630001EB5CC /* BrushingInterval.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
