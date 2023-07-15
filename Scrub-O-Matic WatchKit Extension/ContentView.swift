@@ -12,14 +12,17 @@ struct ContentView: View {
     }
     
     @State var screen: Screen = .brushing
-    
+    @StateObject var brushingFeedbackService = BrushingFeedbackService()
+        
     var body: some View {
         VStack {
             switch screen {
             case .landing:
-                Landing(screen: $screen)
+                Landing(screen: $screen,
+                        brushingFeedbackService: brushingFeedbackService)
             case .brushing:
-                Brushing(screen: $screen)
+                Brushing(screen: $screen,
+                         brushingFeedbackService: brushingFeedbackService)
             }
         }
     }
@@ -28,7 +31,8 @@ struct ContentView: View {
 struct Landing: View {
     
     @Binding var screen: ContentView.Screen
-    
+    @ObservedObject var brushingFeedbackService: BrushingFeedbackService
+
     var body: some View {
         VStack(alignment: .center, spacing: 6.0) {
             Text("Well done!")
@@ -38,6 +42,7 @@ struct Landing: View {
                 .font(.title)
             Button("Close") {
                 screen = .brushing
+                brushingFeedbackService.sendStop()
             }
         }
     }
@@ -48,6 +53,7 @@ struct Brushing: View {
     @Binding var screen: ContentView.Screen
     @State var isTimerRunning = false
     @ObservedObject var countdownTimer = CountdownTimer(limitTimeInteraval: Self.interval)
+    @ObservedObject var brushingFeedbackService: BrushingFeedbackService
     @State var timeRemaining = Self.interval.asInt()
     let timer = Timer.publish(every: 1, on: .main, in: .common)
         .autoconnect()
@@ -74,9 +80,9 @@ struct Brushing: View {
                         
             if timeRemaining > 0 {
                 timeRemaining -= 1
-                BrushingFeedback.sendTimeElapsingForInterval(Self.interval, elapsingTime: timeRemaining)
+                BrushingFeedbackService.sendTimeElapsingForInterval(Self.interval, elapsingTime: timeRemaining)
             } else {
-                BrushingFeedback.sendTimeElapsed()
+                brushingFeedbackService.sendTimeElapsed()
                 navigateToLandingScreen()
             }
         }
@@ -106,12 +112,10 @@ extension Brushing {
     private func toggleTimer() {
         if isTimerRunning {
             resetCountdownTimer()
-            WatchKitSession.shared.stop()
-            BrushingFeedback.sendStart()
+            brushingFeedbackService.sendStop()
         } else {
             startCountdownTimer()
-            WatchKitSession.shared.start()
-            BrushingFeedback.sendStop()
+            brushingFeedbackService.sendStart()
         }
         isTimerRunning = !isTimerRunning
     }

@@ -4,20 +4,32 @@
 
 import SwiftUI
 
-struct BrushingFeedback {
+final class BrushingFeedbackService: ObservableObject {
     
-    private init() {}
+    private var timer: Timer?
     
-    static func sendStart() {
+    func sendStart() {
         WKInterfaceDevice.current().play(.start)
+        startWatchKitSession()
     }
     
-    static func sendStop() {
+    func sendStop() {
         WKInterfaceDevice.current().play(.stop)
+        timer?.invalidate()
+        timer = nil
+        stopWatchKitSession()
     }
+}
+
+extension BrushingFeedbackService {
     
-    static func sendTimeElapsed() {
-        WKInterfaceDevice.current().play(.success)
+    // MARK: Time Elapsed / Elapsing
+    
+    func sendTimeElapsed() {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+            WKInterfaceDevice.current().play(.success)
+        }
     }
     
     static func sendTimeElapsingForInterval(_ interval: TimeInterval, elapsingTime: Int) {
@@ -42,5 +54,18 @@ struct BrushingFeedback {
             WKInterfaceDevice.current().play(hapticNotification)
         }
          */
+    }
+}
+
+extension BrushingFeedbackService {
+    
+    // MARK: WatchKitSession
+    
+    private func startWatchKitSession() {
+        WatchKitSession.shared.start()
+    }
+
+    private func stopWatchKitSession() {
+        WatchKitSession.shared.stop()
     }
 }
