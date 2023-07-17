@@ -67,8 +67,9 @@ struct Brushing: View {
                 padding: 10,
                 lineWidth: 15
             )
-            Text("\(isTimerRunning ? "STOP" : "START")")
-                .font(.title)
+            Text("\(isTimerRunning ? "Stop" : "Start\nBrushing")")
+                .font(.title3)
+                .multilineTextAlignment(.center)
         }
         .onTapGesture {
             toggleTimer()
