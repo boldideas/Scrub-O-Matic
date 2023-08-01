@@ -7,7 +7,7 @@ import SwiftUI
 
 struct EmojiBubbleView: View {
     
-    @Binding var animate: Bool
+    @State private var animate = false
 
     var body: some View {
         GeometryReader { geometry in
@@ -19,6 +19,12 @@ struct EmojiBubbleView: View {
                         .font(.largeTitle)
                         .offset(x: offsetX, y: animate ? -geometry.size.height * 3 : initialOffsetY)
                 }
+            }
+        }
+        .onAppear {
+            SoundPlayer.play("bubbles", withExtension: "m4a")
+            withAnimation(.linear(duration: 10)) {
+                animate = true
             }
         }
     }

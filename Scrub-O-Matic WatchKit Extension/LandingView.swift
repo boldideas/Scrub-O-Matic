@@ -9,7 +9,6 @@ struct Landing: View {
     
     @Binding var screen: ContentView.Screen
     @ObservedObject var brushingFeedbackService: BrushingFeedbackService
-    @State private var animate = false
 
     private var wellDoneView: some View {
         VStack(alignment: .center, spacing: 6.0) {
@@ -28,12 +27,7 @@ struct Landing: View {
     var body: some View {
         ZStack {
             wellDoneView
-            EmojiBubbleView(animate: $animate)
-        }
-        .onAppear {
-            withAnimation(.linear(duration: 10)) {
-                animate = true
-            }
+            EmojiBubbleView()
         }
     }
 }

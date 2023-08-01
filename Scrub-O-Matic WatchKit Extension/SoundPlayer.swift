@@ -15,7 +15,7 @@ struct SoundPlayer {
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
-            let sound = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
+            let sound = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType(rawValue: soundFileExtension).rawValue)
             sound.play()
         } catch let error {
             print("There was an error playing the sound: \(error.localizedDescription)")
