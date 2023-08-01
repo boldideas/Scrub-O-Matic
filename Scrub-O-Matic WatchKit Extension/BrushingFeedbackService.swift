@@ -28,10 +28,6 @@ extension BrushingFeedbackService {
     func sendTimeElapsed() {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            guard SilentModeChecker.isDeviceInSilentMode else {
-                SoundPlayer.play("bubbles", withExtension: "m4a")
-                return
-            }
             WKInterfaceDevice.current().play(.success)
         }
     }

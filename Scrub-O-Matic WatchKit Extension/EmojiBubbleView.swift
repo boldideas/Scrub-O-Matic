@@ -22,7 +22,7 @@ struct EmojiBubbleView: View {
             }
         }
         .onAppear {
-            SoundPlayer.play("bubbles", withExtension: "m4a")
+//            SoundPlayer.play("bubbles", withExtension: "m4a")
             withAnimation(.linear(duration: 10)) {
                 animate = true
             }
