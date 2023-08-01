@@ -9,7 +9,7 @@ struct BrushingInterval {
     
     static var time: TimeInterval {
         #if DEBUG
-        10
+        4
         #else
         120
         #endif
