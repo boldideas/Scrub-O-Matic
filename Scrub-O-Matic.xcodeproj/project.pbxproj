@@ -16,6 +16,8 @@
 		2C67DAB92A790F8D005F5F66 /* EmojiBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C67DAB82A790F8D005F5F66 /* EmojiBubbleView.swift */; };
 		2C67DABB2A791082005F5F66 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C67DABA2A791082005F5F66 /* LandingView.swift */; };
 		2C67DABD2A7910A6005F5F66 /* BrushingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C67DABC2A7910A6005F5F66 /* BrushingView.swift */; };
+		2C67DABF2A7911B2005F5F66 /* SilentModeChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C67DABE2A7911B2005F5F66 /* SilentModeChecker.swift */; };
+		2C67DAC12A79126C005F5F66 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C67DAC02A79126C005F5F66 /* SoundPlayer.swift */; };
 		2CD8C625263590C20066D591 /* Scrub-O-Matic WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2CD8C624263590C20066D591 /* Scrub-O-Matic WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2CD8C62A263590C50066D591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8C629263590C50066D591 /* Assets.xcassets */; };
 		2CD8C636263590C60066D591 /* ExampleWatchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8C635263590C60066D591 /* ExampleWatchAppApp.swift */; };
@@ -62,6 +64,9 @@
 		2C67DAB82A790F8D005F5F66 /* EmojiBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiBubbleView.swift; sourceTree = "<group>"; };
 		2C67DABA2A791082005F5F66 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		2C67DABC2A7910A6005F5F66 /* BrushingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushingView.swift; sourceTree = "<group>"; };
+		2C67DABE2A7911B2005F5F66 /* SilentModeChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilentModeChecker.swift; sourceTree = "<group>"; };
+		2C67DAC02A79126C005F5F66 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		2C67DAC52A7913F7005F5F66 /* bubbles.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bubbles.m4a; sourceTree = "<group>"; };
 		2CD8C620263590C20066D591 /* Scrub-O-Matic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scrub-O-Matic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD8C624263590C20066D591 /* Scrub-O-Matic WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scrub-O-Matic WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD8C629263590C50066D591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +101,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2C67DAC22A791335005F5F66 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C67DAC52A7913F7005F5F66 /* bubbles.m4a */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2CD8C619263590C20066D591 = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +140,10 @@
 		2CD8C634263590C60066D591 /* Scrub-O-Matic WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2C67DAC22A791335005F5F66 /* Resources */,
 				2C3DA7D92656B59D00A9003D /* AnimationRingShape.swift */,
+				2C67DABE2A7911B2005F5F66 /* SilentModeChecker.swift */,
+				2C67DAC02A79126C005F5F66 /* SoundPlayer.swift */,
 				2C3DA7D72656B59D00A9003D /* CountdownRingView.swift */,
 				2C3DA7D82656B59D00A9003D /* CountdownTimer.swift */,
 				2CD8C635263590C60066D591 /* ExampleWatchAppApp.swift */,
@@ -267,6 +283,7 @@
 				2C67DABB2A791082005F5F66 /* LandingView.swift in Sources */,
 				2C3D80E32A600FA900FE1DF2 /* RuntimeSession.swift in Sources */,
 				2CD8C63A263590C60066D591 /* NotificationController.swift in Sources */,
+				2C67DABF2A7911B2005F5F66 /* SilentModeChecker.swift in Sources */,
 				2C5E23D0264C7F7D00623524 /* ContentView.swift in Sources */,
 				2C3DA7DB2656B59D00A9003D /* CountdownTimer.swift in Sources */,
 				2CE123CB2A4C9B590013CE70 /* BrushingFeedbackService.swift in Sources */,
@@ -276,6 +293,7 @@
 				2CD8C636263590C60066D591 /* ExampleWatchAppApp.swift in Sources */,
 				2CD8C63C263590C60066D591 /* NotificationView.swift in Sources */,
 				2C67DABD2A7910A6005F5F66 /* BrushingView.swift in Sources */,
+				2C67DAC12A79126C005F5F66 /* SoundPlayer.swift in Sources */,
 				2C1C3A172A62B630001EB5CC /* BrushingInterval.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
