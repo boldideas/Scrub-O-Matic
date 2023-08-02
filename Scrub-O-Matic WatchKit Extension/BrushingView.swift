@@ -20,7 +20,7 @@ struct Brushing: View {
         ZStack {
             CountdownRingView(
                 countdownTimer: countdownTimer,
-                gradientColors: [.orange, .blue],
+                gradientColors: [.purple, .blue],
                 padding: 10,
                 lineWidth: 15
             )
