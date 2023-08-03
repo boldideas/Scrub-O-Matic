@@ -17,7 +17,7 @@ struct Landing: View {
                 .bold()
             Text("🪥🎉")
                 .font(.title)
-            Button("Brush again") {
+            Button("Done") {
                 screen = .brushing
                 brushingFeedbackService.sendStop()
             }
